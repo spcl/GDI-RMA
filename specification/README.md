@@ -99,7 +99,7 @@ cases where graph data becomes inconsistent until the system has converged.
 Transactions must be able to detect such state and abort accordingly. GDI
 provides barrier functions to the user to synchronize the system. Some GDI
 functions provide explicit synchronization, which is generally described in more
-detail in the function’s specification. Note that implementations might provide
+detail in the function's specification. Note that implementations might provide
 consistency models for global elements that are more restrictive (stronger) than
 eventual consistency.
 
