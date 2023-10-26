@@ -66,7 +66,7 @@ as an API that can be used by any of the higher layers.
 <td>Query functions consume data from the storage engine and return objects like edges, vertices, paths, or subgraphs. Aggregation functions are provided to return aggregated values. Further functionality includes filtering of objects (e.g., by labels or properties).</td>
 </tr>
 <tr>
-<td align="center">**(Layer 2) Storage Engine (GDI)**</td>
+<td align="center"><b>(Layer 2) Storage Engine (GDI)</b></td>
 <tr>
 <td>Storage engine uses the low-level storage layer to access the graph data. It basically translates from disk dependent storage (for example CSV, JSON, binary format, block format) to generic objects. Therefore, this layer provides a rich set of interfaces to create, read, update and delete (CRUD) vertices, edges and associated labels and properties. This layer should provide ACID guarantees to the upper layers. If not, then a layer above must handle queries in a way that they do not interfere.</td>
 </tr>
