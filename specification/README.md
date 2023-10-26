@@ -39,18 +39,45 @@ fault tolerance is taken into account.
 The following table illustrates an example design of a graph database. GDI acts
 as an API that can be used by any of the higher layers.
 
-| (Layer 6) Client |
-| A client queries the graph database. Typically, the client uses a graph query language to run traversals and graph matching requests. |
-| (Layer 5) Query Planner |
-| The query planner works in close cooperation with the execution engine to determine an ordered set of steps to execute the query given by the client. |
-| (Layer 4) Execution Engine |
-| Execution engine distributes workload among multiple machines and aggregate intermediate results that ran on different processes. |
-| (Layer 3) Query Functions |
-| Query functions consume data from the storage engine and return objects like edges, vertices, paths, or subgraphs. Aggregation functions are provided to return aggregated values. Further functionality includes filtering of objects (e.g., by labels or properties). |
-| **(Layer 2) Storage Engine (GDI)** |
-| Storage engine uses the low-level storage layer to access the graph data. It basically translates from disk dependent storage (for example CSV, JSON, binary format, block format) to generic objects. Therefore, this layer provides a rich set of interfaces to create, read, update and delete (CRUD) vertices, edges and associated labels and properties. This layer should provide ACID guarantees to the upper layers. If not, then a layer above must handle queries in a way that they do not interfere. |
-| (Layer 1) Low-Level Storage Layer (Storage Backend) |
-| This layer provides an abstraction for a low-level storage layer such as hard disks (for example CSV ﬁles, JSON, binary formats, block format), RAM, distributed RAM or others. Its goal is to store the data in a reliable way and provide fast data access. |
+<table>
+<tbody>
+<tr>
+<td>(Layer 6) Client</td>
+</tr>
+<tr>
+<td>A client queries the graph database. Typically, the client uses a graph query language to run traversals and graph matching requests.</td>
+</tr>
+<tr>
+<td>(Layer 5) Query Planner</td>
+</tr>
+<tr>
+<td>The query planner works in close cooperation with the execution engine to determine an ordered set of steps to execute the query given by the client.</td>
+</tr>
+<tr>
+<td>(Layer 4) Execution Engine</td>
+</tr>
+<tr>
+<td>Execution engine distributes workload among multiple machines and aggregate intermediate results that ran on different processes.</td>
+</tr>
+<tr>
+<td>(Layer 3) Query Functions</td>
+</tr>
+<tr>
+<td>Query functions consume data from the storage engine and return objects like edges, vertices, paths, or subgraphs. Aggregation functions are provided to return aggregated values. Further functionality includes filtering of objects (e.g., by labels or properties).</td>
+</tr>
+<tr>
+<td>**(Layer 2) Storage Engine (GDI)**</td>
+<tr>
+<td>Storage engine uses the low-level storage layer to access the graph data. It basically translates from disk dependent storage (for example CSV, JSON, binary format, block format) to generic objects. Therefore, this layer provides a rich set of interfaces to create, read, update and delete (CRUD) vertices, edges and associated labels and properties. This layer should provide ACID guarantees to the upper layers. If not, then a layer above must handle queries in a way that they do not interfere.</td>
+</tr>
+<tr>
+<td>(Layer 1) Low-Level Storage Layer (Storage Backend)</td>
+</tr>
+<tr>
+<td>This layer provides an abstraction for a low-level storage layer such as hard disks (for example CSV ﬁles, JSON, binary formats, block format), RAM, distributed RAM or others. Its goal is to store the data in a reliable way and provide fast data access.</td>
+</tr>
+</tbody>
+</table>
 
 ## Execution and Consistency
 
