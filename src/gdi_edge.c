@@ -7,6 +7,7 @@
 // main author: Robert Gerstenberger
 
 #include <assert.h>
+#include <stdio.h>
 
 #include "gdi.h"
 #include "gda_lightweight_edges.h"
