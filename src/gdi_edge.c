@@ -793,6 +793,8 @@ int GDI_AddPropertyToEdge( const void* value, size_t count, GDI_PropertyType pty
     }
   }
 
+  fprintf( stderr, "GDI_AddPropertyToEdge implements only input parsing and should not be used.\n" );
+
   // TODO: probably have to handle GDI_PROPERTY_TYPE_ID differently
 
   edge->write_flag = true; // TODO: only if the property is actually inserted
@@ -861,6 +863,8 @@ int GDI_RemovePropertiesFromEdge( GDI_PropertyType ptype, GDI_EdgeHolder edge ) 
       return GDI_ERROR_TRANSACTION_CRITICAL;
     }
   }
+
+  fprintf( stderr, "GDI_RemovePropertiesFromEdge implements only input parsing and should not be used.\n" );
 
   // TODO: remove properties from local edge object and update the index (maybe)
   // TODO: probably have to handle GDI_PROPERTY_TYPE_ID differently
@@ -947,6 +951,8 @@ int GDI_RemoveSpecificPropertyFromEdge( const void* value, size_t count, GDI_Pro
       return GDI_ERROR_TRANSACTION_CRITICAL;
     }
   }
+
+  fprintf( stderr, "GDI_RemoveSpecificPropertyFromEdge implements only input parsing and should not be used.\n" );
 
   // TODO: remove property from local edge object and update the index (maybe)
   // TODO: probably have to handle GDI_PROPERTY_TYPE_ID differently
@@ -1036,6 +1042,8 @@ int GDI_UpdatePropertyOfEdge( const void* value, size_t count, GDI_PropertyType 
     }
   }
 
+  fprintf( stderr, "GDI_UpdatePropertyOfEdge implements only input parsing and should not be used.\n" );
+
   // TODO: update property from local edge object and update the index (maybe)
   // TODO: probably have to handle GDI_PROPERTY_TYPE_ID differently
 
@@ -1120,6 +1128,8 @@ int GDI_UpdateSpecificPropertyOfEdge( const void* old_value, size_t old_count, c
       return GDI_ERROR_TRANSACTION_CRITICAL;
     }
   }
+
+  fprintf( stderr, "GDI_UpdateSpecificPropertyOfEdge implements only input parsing and should not be used.\n" );
 
   // TODO: update property from local edge object and update the index (maybe)
   // TODO: probably have to handle GDI_PROPERTY_TYPE_ID differently
@@ -1206,6 +1216,8 @@ int GDI_SetPropertyOfEdge( const void* value, size_t count, GDI_PropertyType pty
       return GDI_ERROR_TRANSACTION_CRITICAL;
     }
   }
+
+  fprintf( stderr, "GDI_SetPropertyOfEdge implements only input parsing and should not be used.\n" );
 
   // TODO: update property from local edge object and update the index (maybe)
   // TODO: probably have to handle GDI_PROPERTY_TYPE_ID differently

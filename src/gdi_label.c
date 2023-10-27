@@ -86,6 +86,7 @@ int GDI_FreeLabel( GDI_Label* label ) {
   }
 
 
+  fprintf( stderr, "GDI_FreeLabel is not fully implemented. Removal of label from indexes, vertices and edges is still missing.\n" );
 
   // !!!
   // TODO: REMOVE FROM ALL INDEXES, VERTICES, AND EDGES THE LABEL

@@ -156,6 +156,7 @@ int GDI_FreePropertyType( GDI_PropertyType* ptype ) {
   GDA_List* ptypes = ((GDI_Database)(*ptype)->db)->ptypes->ptypes;
 
 
+  fprintf( stderr, "GDI_FreePropertyType is not fully implemented. Removal of properties from indexes, vertices and edges is still missing.\n" );
 
   // !!!
   // TODO: REMOVE FROM ALL INDEXES, VERTICES, AND EDGES THE PROPERTY TYPE
@@ -248,6 +249,7 @@ int GDI_UpdatePropertyType( const char* name, int etype, GDI_Datatype dtype,
   }
 
 
+  fprintf( stderr, "GDI_UpdatePropertyType is not fully implemented. Update of properties on vertices and edges is still missing.\n" );
 
   // !!!
   // TODO: UPDATE THE PROPERTY TYPE ON ALL EDGES, VERTICES
