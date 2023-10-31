@@ -17,10 +17,11 @@ with 120,000 cores and 77 TB of distributed memory with datasets scaling up to
 ## Setup Guide
 
 The source code to build the GDI-RMA library can be found in the [src](src)
-directory. The library is written in C. Please update the C compiler and its
-flags to the needs of your system at the beginning of the
-[Makefile](src/Makefile) (variables `CC` and `CFLAGS`). Afterwards calling
-`make` should result in the creation of the library file `libgdi.a`.
+directory. The library is written in C and uses MPI for its communication needs
+(one-sided/collectives). Please update the C compiler and its flags to the needs
+of your system at the beginning of the [Makefile](src/Makefile) (variables `CC`
+and `CFLAGS`). Afterwards calling `make` should result in the creation of the
+library file `libgdi.a`.
 
 If you intend to use
 [foMPI](https://spcl.inf.ethz.ch/Research/Parallel_Programming/foMPI/), please
