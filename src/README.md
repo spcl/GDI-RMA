@@ -1,7 +1,7 @@
 # GDI-RMA (GDA)
 
 <p align="center">
-  <img src="paper/pics/gda_2.svg">
+  <img src="../paper/pics/gda_2.svg">
 </p>
 
 GDI-RMA is a reference implementation of the Graph Database Interface
