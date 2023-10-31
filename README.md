@@ -6,13 +6,13 @@
 
 GDI-RMA is a reference implementation of the paper The Graph Database Interface:
 Scaling Online Transactional and Analytical Graph Workloads to Hundreds of
-Thousands of Cores to be presented at the International Conference for High
+Thousands of Cores presented at the International Conference for High
 Performance Computing, Networking, Storage and Analysis (SC '23).
 
-It implements a distributed-memory graph database with use of one-sided Remote
-Direct Memory Access (RDMA). GDI-RMA was scaled to over 7,000 servers with
-120,000 cores and 77 TB of distributed memory with datasets scaling up to 34
-billion vertices and 549 billion edges.
+It implements a distributed-memory graph database with the use of one-sided
+Remote Direct Memory Access (RDMA). GDI-RMA was scaled to over 7,000 servers
+with 120,000 cores and 77 TB of distributed memory with datasets scaling up to
+34 billion vertices and 549 billion edges.
 
 ## Setup Guide
 
@@ -20,7 +20,7 @@ The source code to build the GDI-RMA library can be found in the [src](src)
 directory. The library is written in C. Please update the C compiler and its
 flags to the needs of your system at the beginning of the
 [Makefile](src/Makefile) (variables `CC` and `CFLAGS`). Afterwards calling
-`make` should result in the library file `libgdi.a`.
+`make` should result in the creation of the library file `libgdi.a`.
 
 If you intend to use
 [foMPI](https://spcl.inf.ethz.ch/Research/Parallel_Programming/foMPI/), please
@@ -30,8 +30,8 @@ to your foMPI installation in line 6.
 ## Quickstart
 
 The following source code provides a minimal example, that creates a simple
-graph database, which contains two vertices that are connected through a
-directed edge. Error checking is omitted for clarity.
+graph database with two vertices that are connected through a directed edge.
+Error checking is omitted for clarity.
 
 ```C
 #include <stdio.h>
@@ -83,16 +83,16 @@ int main( int argc, char* argv[] ) {
 ```
 Assuming that the source code is stored in the main directory in the file
 `min_example.c`, it can be compiled for example with the command `mpicc -o
-min_example min_example.c -I src -Lsrc -lgdi` and executed with the command
+min_example min_example.c -Isrc -Lsrc -lgdi` and executed with the command
 `mpirun -n <#procs> ./min_example`.
 
 ## Documentation
 
 The Graph Database Interface (GDI) API is documented as a
-[specification](specification/gdi_v0.1.pdf) and high-level overviews of that
-specification can be found in the respective [README](specification/README.md)
-as well as in the paper. The paper also presents an overview of the
-GDI-RMA implementation of the GDI specification.
+[specification](specification/gdi_v0.1.pdf) and a high-level overview of that
+specification can be found in the paper with additional information found in the
+respective [README](specification/README.md). The paper also presents an
+overview of the GDI-RMA reference implementation.
 
 ## Citations
 
