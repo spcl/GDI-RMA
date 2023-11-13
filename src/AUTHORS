@@ -1,0 +1,15 @@
+AUTHORS
+-------
+
+GDI-RMA was developed from 2019 to 2023 at ETH Zurich.
+
+main author:
+Robert Gerstenberger <gerstenberger.robert@gmail.com>
+
+Mark Fischer worked on the initial code base in 2019 to 2020.
+Roman Haag worked on the implementation of lightweight edges in 2021.
+Wojciech Chlapek worked on the lock implementation in 2021.
+
+other authors:
+Maciej Besta <maciej.besta@inf.ethz.ch>
+Torsten Hoefler <torsten.hoefler@inf.ethz.ch>
