@@ -9,10 +9,15 @@ Scaling Online Transactional and Analytical Graph Workloads to Hundreds of
 Thousands of Cores presented at the International Conference for High
 Performance Computing, Networking, Storage and Analysis (SC '23).
 
-It implements a distributed-memory graph database with the use of one-sided
+GDI-RMA implements a distributed-memory graph database with the use of one-sided
 Remote Direct Memory Access (RDMA). GDI-RMA was scaled to over 7,000 servers
 with 120,000 cores and 77 TB of distributed memory with datasets scaling up to
 34 billion vertices and 549 billion edges.
+
+GDI-RMA stores all data in the main memory and does not follow the traditional
+server-client model, but instead uses RDMA to access remote data, which allows
+the processes that store the graph database data also to issue and process
+queries.
 
 ## Setup Guide
 
@@ -90,7 +95,7 @@ min_example min_example.c -Isrc -Lsrc -lgdi` and executed with the command
 ## Documentation
 
 The Graph Database Interface (GDI) API is documented as a
-[specification](specification/gdi_v0.1.pdf) and a high-level overview of that
+[specification](specification/gdi_v0.9.pdf) and a high-level overview of that
 specification can be found in the paper with additional information found in the
 respective [README](specification/README.md). The paper also presents an
 overview of the GDI-RMA reference implementation.

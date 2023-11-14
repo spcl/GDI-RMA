@@ -33,7 +33,7 @@ The output files for the vertices are:
 * `nodes_Project.csv`
 * `nodes_Resource.csv`
 
-The edges files consist of a header in the first line: `:START_ID(VERTEX LABEL
+The edge files consist of a header in the first line: `:START_ID(VERTEX LABEL
 1),:END_ID(VERTEX LABEL 2)`, where `VERTEX LABEL 1` identifies the labels of the
 origin vertices and `VERTEX LABEL 2` identifies the labels of the target
 vertices. The header is followed by the edges on separate lines. Each line
