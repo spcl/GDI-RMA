@@ -9,7 +9,7 @@ GDI=../src
 LSB=liblsb/build
 
 # foMPI related parameters
-# FOMPI=../foMPI-0.2.2
+# FOMPI=<path to foMPI library>
 # INC+=-I$(FOMPI)
 # CCFLAGS+=-DRMA_USE_FOMPI
 # CXXFLAGS+=-DRMA_USE_FOMPI

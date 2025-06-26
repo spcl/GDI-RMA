@@ -1,4 +1,4 @@
-include ../../../Makefile.inc
+CC=cc
 
 #maybe include Makefile.inc from higher-level directory
 CCFLAGS = -fcommon -Drestrict=__restrict__ -O3 #-DDEBUG -g
