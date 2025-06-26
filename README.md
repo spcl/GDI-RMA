@@ -33,6 +33,11 @@ If you intend to use
 enable the related parameters in lines 6 to 9 of the Makefile and set the path
 to your foMPI installation in line 6.
 
+Please note that the benchmark code uses
+[LibSciBench](https://spcl.inf.ethz.ch/Research/Performance/LibLSB/) for its
+measurements, so please install that library, if you intend to run that part of
+the code.
+
 ## Quickstart
 
 The following source code provides a minimal example, that creates a simple
