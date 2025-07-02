@@ -137,10 +137,13 @@ int main( int argc, char* argv[] ) {
   }
 
   if( !(filename.empty()) ) {
-    for( uint32_t i=0 ; i<rcount ; i++ ) {
-      /* hijack function: creates a random uint64_t value between a range of 0 and the maximum value */
-      bfs_roots[i] = create_uint64_property( nglobalverts /* maximum value */ );
+    if( rank == 0 ) {
+      for( uint32_t i=0 ; i<rcount ; i++ ) {
+        unsigned int seed = time(0); // if you require deterministic random numbers, fix the seed
+        bfs_roots[i] = rand_r(&seed) % nglobalverts;
+      }
     }
+    MPI_Bcast( bfs_roots, rcount, MPI_UINT64_T, 0 /* root */, MPI_COMM_WORLD);
   } else {
     /* use roots determined by the Graph500 code */
     char* line = (char*) malloc( 10000 * sizeof(char) );
